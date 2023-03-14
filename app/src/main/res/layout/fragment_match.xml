@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/backgraund"
+    tools:context=".match.ui.MatchFragment">
+
+
+    <TextView
+        android:text="@string/matchboard"
+        style="@style/toolbar_textview_style" />
+
+    <RadioGroup
+        android:id="@+id/date_radoogroup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:background="@drawable/date_background"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/three_days_before_today_textview"
+            android:layout_width="wrap_content"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/two_days_before_today_textview"
+            android:layout_width="wrap_content"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/one_day_before_today_textview"
+            android:layout_width="wrap_content"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/today_textview"
+            android:layout_width="wrap_content"
+            android:text="@string/today"
+            android:checked="true"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/one_day_after_today_textview"
+            android:layout_width="wrap_content"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/two_days_after_today_textview"
+            android:layout_width="wrap_content"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/three_days_after_today_textview"
+            android:layout_width="wrap_content"
+            style="@style/style_radio_button"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matches_recyclerview"
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading_lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/ball_on_finger"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
+</LinearLayout>

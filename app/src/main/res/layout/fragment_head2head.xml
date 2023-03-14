@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".match.ui.Head2HeadFragment">
+
+    <ProgressBar
+        android:id="@+id/h2h_loading"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:indeterminateTint="@color/orange"
+        android:layout_gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/match_h2h_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/h2h_layout_1"
+        android:layout_width="match_parent"
+        android:background="@color/standings_white_1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/team_1position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/back_3"
+            android:padding="10dp"
+            android:text="1" />
+
+        <ImageView
+            android:id="@+id/team_1_logo_imageview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/badge"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/team_1_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:textColor="@color/back_3"
+            android:padding="10dp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:textColor="@color/back_3"
+            android:text="@string/not_available"
+            tools:ignore="SmallSp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:id="@+id/h2h_layout_2"
+        android:layout_marginBottom="20dp"
+        android:background="@color/standings_white_2"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/team_2_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/back_3"
+            android:padding="10dp"
+            android:text="2" />
+
+        <ImageView
+            android:id="@+id/team_2_logo_imageview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/badge"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/team_2_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:textColor="@color/back_3"
+            android:padding="10dp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_gravity="center"
+            android:textColor="@color/back_3"
+            android:text="@string/not_available" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

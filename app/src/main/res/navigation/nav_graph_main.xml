@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.develpouk.niu.generalui.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_viewWorkFragment"
+            app:destination="@id/viewWorkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.develpouk.niu.generalui.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_policyFragment"
+            app:destination="@id/policyFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_rateAppFragment"
+            app:destination="@id/rateAppFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_matchInfoFragment"
+            app:destination="@id/matchInfoFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_newsFragmentDetail"
+            app:destination="@id/newsFragmentDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="com.develpouk.niu.settings.PolicyFragment"
+        android:label="fragment_policy"
+        tools:layout="@layout/fragment_policy" />
+    <fragment
+        android:id="@+id/rateAppFragment"
+        android:name="com.develpouk.niu.settings.RateAppFragment"
+        android:label="fragment_rate_app"
+        tools:layout="@layout/fragment_rate_app" />
+    <fragment
+        android:id="@+id/matchInfoFragment"
+        android:name="com.develpouk.niu.match.ui.MatchInfoFragment"
+        android:label="fragment_match_info"
+        tools:layout="@layout/fragment_match_info" >
+        <argument
+            android:name="match"
+            app:argType="com.develpouk.niu.match.model.MatchModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragmentDetail"
+        android:name="com.develpouk.niu.news.ui.NewsFragmentDetail"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="article"
+            app:argType="com.develpouk.niu.news.model.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewWorkFragment"
+        android:name="com.develpouk.niu.viewwork.ViewWorkFragment"
+        android:label="fragment_view_work"
+        tools:layout="@layout/fragment_view_work" >
+        <action
+            android:id="@+id/action_viewWorkFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+</navigation>
