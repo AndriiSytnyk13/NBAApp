@@ -32,11 +32,6 @@
             app:destination="@id/newsFragmentDetail" />
     </fragment>
     <fragment
-        android:id="@+id/policyFragment"
-        android:name="com.develpouk.niu.settings.PolicyFragment"
-        android:label="fragment_policy"
-        tools:layout="@layout/fragment_policy" />
-    <fragment
         android:id="@+id/rateAppFragment"
         android:name="com.develpouk.niu.settings.RateAppFragment"
         android:label="fragment_rate_app"

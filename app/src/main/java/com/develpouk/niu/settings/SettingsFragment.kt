@@ -2,13 +2,12 @@ package com.develpouk.niu.settings
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.develpouk.niu.BuildConfig
 import com.develpouk.niu.R
 import com.develpouk.niu.databinding.FragmentSettingsBinding
 
@@ -20,9 +19,6 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         FragmentSettingsBinding.inflate(inflater, container, false).run {
-            privacyPolicyLayout.setOnClickListener {
-                showPolicy()
-            }
             shareAppLayout.setOnClickListener {
                 shareApp()
             }
@@ -56,10 +52,6 @@ class SettingsFragment : Fragment() {
                 Toast.LENGTH_LONG
             ).show()
         }
-    }
-
-    private fun showPolicy() {
-        requireActivity().findNavController(R.id.nav_host_main).navigate(R.id.policyFragment)
     }
 
 
